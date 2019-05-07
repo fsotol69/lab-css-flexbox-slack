@@ -5,3 +5,144 @@ main-titles dark-grey: #2C303F;
 paragraph grey: #5b5e6d;
 nav grey: #5b5e6d;
 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2rem;
+}
+
+li {
+  list-style: none;
+}
+
+nav {
+  height: 5rem;
+  display: flex;
+  direction: row;
+  border: 1px solid red;
+}
+
+#menu {
+  display: flex;
+  direction: row;
+  flex-wrap: wrap;
+  height: 5rem;
+  margin: 0;
+}
+
+nav ul li {
+  line-height: 5rem;
+  padding: 0rem 2rem;
+  border: 1px solid red;
+}
+
+nav img {
+  height: 5rem;
+  width: auto;
+  border: 1px solid red;
+}
+
+h1,
+h2 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 900;
+  line-height: 1em;
+}
+
+form p {
+  text-align: center;
+}
+
+p,
+.emailInput,
+.submitButton,
+h1 {
+  margin: 1.5rem 0;
+}
+
+.emailInput {
+  width: 100%;
+  height: 5rem;
+  border: 2px solid gainsboro;
+  border-radius: 0.5rem;
+  color: grey;
+  font-size: 1rem;
+}
+
+.submitButton {
+  width: 100%;
+  height: 5rem;
+  border: 2px solid rgb(61, 30, 238);
+  background-color: rgb(61, 30, 238);
+  border-radius: 0.5rem;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+main .submitButton {
+  background-color: ghostwhite;
+  color: rgb(61, 30, 238);
+  border-color: rgb(182, 176, 221);
+  font-weight: 900;
+}
+
+header {
+  width: 90%;
+  margin: 0 auto;
+}
+main {
+  width: 100%;
+  padding: 10%;
+}
+
+@media only screen and (max-width: 760px) {
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  header img {
+    order: 2;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  main:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(243, 240, 240);
+  }
+
+  main:nth-child(2) {
+    background-color: #fff;
+  }
+
+  main img {
+    height: 5rem;
+    padding: 4rem 0;
+  }
+
+  #menu {
+    position: relative;
+    padding-left: 1.25em;
+  }
+  #menu:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.25em;
+    width: 1em;
+    height: 0.15em;
+    background: black;
+    box-shadow: 0 0.25em 0 0 black, 0 0.5em 0 0 black;
+  }
+}
