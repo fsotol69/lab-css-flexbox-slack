@@ -1,10 +1,11 @@
-/*
-background-grey: #F4F3F4;
-button-purple: #192592
-main-titles dark-grey: #2C303F;
-paragraph grey: #5b5e6d;
-nav grey: #5b5e6d;
-*/
+.parameters {
+  background-grey: #f4f3f4;
+  button-purple: #192592;
+  main-titles: #2c303f;
+  paragraphgrey: #5b5e6d;
+  navgrey: #5b5e6d;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -20,10 +21,14 @@ li {
 }
 
 nav {
+  position: fixed;
+  top: 0;
   height: 5rem;
+  padding: 1rem 3rem;
   display: flex;
   direction: row;
-  border: 1px solid red;
+  background-color: #fff;
+  border-bottom: 2px solid #e6e6e6;
 }
 
 #menu {
@@ -37,13 +42,15 @@ nav {
 nav ul li {
   line-height: 5rem;
   padding: 0rem 2rem;
-  border: 1px solid red;
 }
 
 nav img {
-  height: 5rem;
-  width: auto;
-  border: 1px solid red;
+  height: 4rem;
+  padding: 0.5rem 0;
+}
+
+header {
+  margin: 10rem 3rem 3rem 3rem;
 }
 
 h1,
@@ -51,9 +58,16 @@ h2 {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-weight: 900;
   line-height: 1em;
+  padding: 2rem 0 1rem 0;
+  color: rgb(51, 51, 51);
 }
 
-form p {
+p,
+footer {
+  color: #5b5e6d;
+}
+
+.signin {
   text-align: center;
 }
 
@@ -70,34 +84,119 @@ h1 {
   border: 2px solid gainsboro;
   border-radius: 0.5rem;
   color: grey;
-  font-size: 1rem;
+  font-size: 1.5rem;
+  text-indent: 2rem;
 }
 
-.submitButton {
+form .submitButton {
   width: 100%;
   height: 5rem;
-  border: 2px solid rgb(61, 30, 238);
-  background-color: rgb(61, 30, 238);
+  border: 2px solid #192592;
+  background-color: #192592;
   border-radius: 0.5rem;
   color: #fff;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
-main .submitButton {
+main .discoverButton {
   background-color: ghostwhite;
-  color: rgb(61, 30, 238);
+  color: #192592;
   border-color: rgb(182, 176, 221);
-  font-weight: 900;
+  width: 100%;
+  height: 5rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
-header {
-  width: 90%;
-  margin: 0 auto;
-}
 main {
-  width: 100%;
-  padding: 10%;
+  background-color: #f4f3f4;
+}
+
+main div:nth-child(1) {
+  padding: 3rem;
+  background-color: rgb(243, 240, 240);
+}
+
+main div:nth-child(2) {
+  padding: 3rem;
+  background-color: #fff;
+}
+
+#tryfree {
+  color: black;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+}
+
+main div {
+  padding: 3rem 0;
+}
+
+main {
+  text-align: center;
+}
+footer div {
+  padding: 3rem;
+}
+
+footer li:nth-child(1) {
+  font-weight: bold;
+}
+
+footer li {
+  line-height: 5rem;
+}
+
+#subfooter {
+  background-color: #f4f3f4;
+}
+
+#subfooter ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#subfooter li {
+  font-weight: bold;
+  padding: 0 1.5rem;
+  font-size: 0.8em;
+}
+
+.share {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.share i {
+  height: 2rem;
+  padding: 1rem;
+}
+
+.language {
+  padding: 0;
+  border: 1px solid red;
+  align-content: center;
+}
+
+.language img {
+  height: 2rem;
+  border: 1px solid red;
+}
+
+.language span {
+  font-size: 0.8em;
+  line-height: 2rem;
+  font-weight: bold;
+  border: 1px solid red;
+}
+
+.language i {
+  line-height: 1rem;
+  border: 1px solid red;
 }
 
 @media only screen and (max-width: 760px) {
@@ -118,17 +217,35 @@ main {
   main:nth-child(1) {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background-color: rgb(243, 240, 240);
+    flex-wrap: wrap;
   }
 
-  main:nth-child(2) {
-    background-color: #fff;
+  .entities {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
   }
 
   main img {
-    height: 5rem;
-    padding: 4rem 0;
+    width: 40%;
+    padding: 3rem 30%;
+    border-bottom: 2px solid #e6e6e6;
+  }
+
+  #accesos ul {
+    width: 50%;
+  }
+
+  footer div img {
+    margin-left: -3rem;
+  }
+
+  #accesos {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
   }
 
   #menu {
